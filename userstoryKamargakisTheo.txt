@@ -1,0 +1,29 @@
+En tant que developper, je dois prévoir un repo GIT pour mon project
+En tant que developper, je dois prévoir un system backend laravel
+En tant que developper, je dois prévoir un system front
+En tant que developper, je dois prévoir un shémat de ma db
+En tant que developper, je dois prévoir une db
+En tant que Utilisateur, Je dois pouvoir crée un compte
+En tant que Utilisateur, Je dois pouvoir Modifier mon compte
+En tant que Utilisateur, Je dois pouvoir afficher mon compte
+En tant que Utilisateur, Je dois pouvoir suprimer mon compte
+En tant que Utilisateur, Je dois pouvoir me connecter a mon compte
+En tant que Editeur, Je dois pouvoir crée une recette
+En tant que Editeur, Je dois pouvoir Modifier ma recette
+En tant que Utilisateur, Je dois pouvoir afficher une recette
+En tant que Administrateur, Je dois pouvoir suprimer des recettes
+En tant que developper, je dois prévoir un mockup de mon site
+En tant que Utilisateur, J'aimerais pouvoir filter de qu'elle nationalitée s'affiche mes recette
+En tant que Utilisateur, Je dois pouvoir afficher la liste des recette
+En tant que Utilisateur, Je dois pouvoir filter la liste des reccete
+En tant que Administrateur, Je dois prévoir une liste d'ingrédien prédéfinie
+En tant que Editeur, Je dois choidire un ingrédien lors de la création de ma recette
+En tant que Editeur, Je dois choisir le temps que ma recette va prendre
+En tant que developper, je dois mettre a jour la qunatitée d'ingrédiant en fonction du nombre de personne choisie
+En tant que Editeur, je dois pouvoir ajouter une liste d'étape
+En tant que developper, je prévoir d'integrer strapis pour les editeur et les Administrateur
+En tant que developper, je prévoir 3 role
+En tant que Editeur, Je dois pouvoir rajouter des image
+En tant qu'Administrateur, je dois pouvoir valider une recette
+En tant que Utilisateur, Je dois pouvoir imprimier une recette
+En tant que Utilisateur, Je dois pouvoir partager une recette

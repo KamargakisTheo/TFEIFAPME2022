@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ingredient_ingredients",
+  "info": {
+    "displayName": "Ingredient",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "ingredient_name": {
+      "type": "string"
+    }
+  }
+}
