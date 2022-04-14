@@ -1,0 +1,8 @@
+Strapi :
+
+npm run develop --d
+
+
+React :
+
+npm run start --d
