@@ -15,9 +15,6 @@
     "recipe_name": {
       "type": "string"
     },
-    "nationality": {
-      "type": "string"
-    },
     "author": {
       "type": "string"
     },
@@ -34,6 +31,15 @@
       "type": "component",
       "repeatable": true,
       "component": "ingredient.ingredient"
+    },
+    "nationality": {
+      "type": "enumeration",
+      "enum": [
+        "Italien",
+        "Grec",
+        "Japonais"
+      ],
+      "required": false
     }
   }
 }
