@@ -1,14 +1,15 @@
-// import React from "react";
 import React, { useEffect, useState } from "react";
 
-export default function Recipes() {
 
+
+export default function Recipes() {
+    
     const [isLoading, setIsLoading] = useState(true)
     const [recipes, setRecipes] = useState(null);
-
+    
     useEffect(() => 
     {
-        fetch ('http://localhost:1337/api/recipes',
+        fetch (`http://localhost:1337/api/recipes`,
             {
                 method: "GET",
                 headers: 
@@ -17,76 +18,62 @@ export default function Recipes() {
                 }
 
             })
-        .then(res => res.json())
+            .then(res => res.json())
         .then(res => 
             {
             setRecipes(res)
             setIsLoading(false)
-            })
+        })
         
     },[]);
-
+    
 
     return (
-        <div>
+        <div style={{ height: 400, width: '100%' }}>
             <h1>Liste des recettes: </h1>
             <div>
-                {isLoading ? 'Chargement...' : recipes.data.map(recipes =>recipes.attributes.recipe_name)}
-            </div>
-            {/* <div>
-                {isLoading ? 'Chargement...' : recipes.data.map(recipes =>recipes.attributes.nationality)}
-            </div> */}
+                
 
+
+
+                {isLoading ? 'Chargement...' : recipes.data.map(recipes =>
+                (
+                            
+                    
+                    <div key = { recipes.id }>
+
+                        <table style={{ height: 300,textAlign: "center", margin: 100, padding: 20,marginLeft: 200, marginRight: 200, border: 'solid' }}>
+                            <thead>
+                                <tr>
+                                    <th>Nom de la recette</th>
+
+                                    <th>Nationaliée</th>
+
+                                    <th>Quantitée de personne</th>
+
+                                    <th>Description</th>
+
+                                    <th>Auteur de la recette</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><h3>{ recipes.attributes.recipe_name }</h3></td>
+
+                                    <td>{ recipes.attributes.nationality }</td>
+
+                                    <td>{ recipes.attributes.quantity }</td>
+
+                                    <td>{ recipes.attributes.description }</td>
+
+                                    <td>{ recipes.attributes.author }</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        </div>
+                ))}
+            </div>
         </div>
     )
 }
-
-
-
-
-
-// class App extends React.Component {
-//         constructor(props) {
-//                 super(props);
-        
-//                 this.state = {
-//                         items: [],
-//                         DataisLoaded: false
-//                     };
-//                 }
-            
-//                 componentDidMount() {
-//                         fetch(
-//                                     "http://localhost:1337/api/recipes")
-//                                 .then((res) => res.json())
-//                                 .then((json) => {
-//                                         this.setState({
-//                                                 items: json,
-//                                                 DataisLoaded: true
-//                                             });
-//                                         })
-//                                 }
-//                                 render() {
-//                                         const { DataisLoaded, items } = this.state;
-//                                         if (!DataisLoaded) return <div >
-//                                             <h1> Chargement... </h1> </div > ;
-                                
-//                                         return ( <div className = "App" >
-//                                                 <h1> Liste des recettes: </h1>  {
-//                                                     items.data.map((item) => (
-    
-//                         <div key = { item.id } >
-//                         <h3>{ item.attributes.recipe_name }</h3> <br></br> 
-//                         { item.attributes.nationality } <br></br> 
-//                         { item.attributes.quantity } <br></br> 
-//                         { item.attributes.description } <br></br> 
-//                         { item.attributes.author } <br></br>
-//                         </div>
-    
-//                     ))
-    
-//                 }</div>
-//         );
-//     }
-//     }
-//     export default App;
