@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Button from './Button';
 
 
 
@@ -6,31 +7,37 @@ export default function Recipes() {
     
     const [isLoading, setIsLoading] = useState(true)
     const [recipes, setRecipes] = useState(null);
+
     
     useEffect(() => 
     {
         fetch (`http://localhost:1337/api/recipes`,
-            {
-                method: "GET",
-                headers: 
+        {
+            method: "GET",
+            headers: 
                 {
                     'Accept': 'Application/json'
                 }
-
+                
             })
             .then(res => res.json())
         .then(res => 
             {
-            setRecipes(res)
-            setIsLoading(false)
+                setRecipes(res)
+                setIsLoading(false)
         })
         
     },[]);
     
-
+    const filter = (button) =>{
+        const filteredDAta = recipes.data.filter(recipes => recipes.attributes.nationality === button)
+        setRecipes(filteredDAta)
+    }
+    
     return (
         <div style={{ height: 400, width: '100%' }}>
             <h1>Liste des recettes: </h1>
+                <Button filter={filter}/>
             <div>
                 
 
